@@ -1,6 +1,6 @@
 # Node Kill
 
-Bash shell script to kill and/or restart a named node server on OSX
+Bash script to kill and/or restart a named node server on OSX
 
 ## Usage
 
@@ -11,6 +11,8 @@ Kill only:
 Kill and restart:
 
 	sh kill.sh -r myserver
+
+It is important to use `Ctrl-C` when exiting the node server so that the kill script can properly clean up. If you use `Ctrl-Z` the node process will still get cleaned up but the kill script process will remain running indefinitely.
 
 ## Contribute
 
