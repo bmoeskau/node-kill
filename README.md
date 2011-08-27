@@ -2,7 +2,7 @@
 
 Bash shell script to kill and/or restart a named node server on OSX
 
-# Usage
+## Usage
 
 Kill only:
 
@@ -12,15 +12,15 @@ Kill and restart:
 
 	sh kill.sh -r myserver
 
-# Contribute
+## Contribute
 
 Have an idea for improvement? Please fork the repo and send me a pull request. Ideas welcome!
 
-# Acknowledgements
+## Acknowledgements
 
 The line of code for finding PIDs by process name came from [this answer](http://stackoverflow.com/questions/3510673/find-and-kill-a-process-in-one-line-using-bash-and-regex/3510850#3510850) on StackOverflow. I encourage you to go vote it up.
 
-# MIT License
+## MIT License
 
 Copyright (c) 2011 Brian Moeskau
 
