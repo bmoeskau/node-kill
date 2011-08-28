@@ -1,6 +1,6 @@
 # Node Kill
 
-Bash script to kill and/or restart a named node server on OSX
+Bash script to kill and/or restart a named node server
 
 ## Usage
 
