@@ -52,20 +52,8 @@ else
 	sudo kill -KILL $PID
 fi
 
-# This will get called by the trap set below when the user exits, e.g. via Ctrl-C.
-# Since the node process invocation does not allow this kill script to exit by default
-# we have to make sure and clean it up ourselves before we finish.
-function clean_exit {
-	echo
-	echo Exiting $0...
-	# $0 is the name of this script
-	PID=$(ps ax | grep -v grep | grep "$0" | awk '{print $1}')
-	if [ "$PID" != "" ]; then
-		sudo kill -KILL $PID 2> /dev/null  # ignore errors
-		exit
-	fi
-}
-trap "clean_exit" SIGINT SIGQUIT SIGTERM
+# Just exit on Ctrl-C, skip the error message output below
+trap "exit" SIGINT SIGQUIT SIGTERM
 
 # If the restart flag was passed in try to kick off a new instance of the server
 if [ "$restart" = "1" ]; then
